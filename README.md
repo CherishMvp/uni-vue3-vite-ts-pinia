@@ -1,4 +1,4 @@
-# uni-app + vue3.x  项目工程化搭建
+# uni-app + vue3.x  项目工程化搭建（ts版本，不带z-paging）
 
 ## 简介
 
