@@ -100,3 +100,6 @@
 ├── unocss.config.ts unocss配置
 └── vite.config.ts vite配置
 ```
+
+# 2023-10-24 23:50:03
+- 小程序工具记得开启条件编译和转es5功能，其他次要

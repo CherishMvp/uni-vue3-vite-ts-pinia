@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { useTitle } from '@/hooks/useTitle';
-import { forward } from '@/utils/router';
+  import { useTitle } from '@/hooks/useTitle';
+  import { forward } from '@/utils/router';
 
-const { title, changeTitle } = useTitle();
-function goTest() {
-  forward('test', {
-    a: 1
-  });
-}
+  const { title, changeTitle } = useTitle();
+  const confirm=(e:any)=>{
+  console.log(e)
+  }
+  function goTest() {
+    forward('test', {
+      a: 1,
+    });
+  }
 </script>
 
 <template>
@@ -22,26 +25,26 @@ function goTest() {
 </template>
 
 <style scoped lang="scss">
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.logo {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 200rpx;
-  margin-bottom: 50rpx;
-  width: 200rpx;
-  height: 200rpx;
-}
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200rpx;
+    margin-bottom: 50rpx;
+    width: 200rpx;
+    height: 200rpx;
+  }
+  .text-area {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    font-size: 36rpx;
+    color: #8f8f94;
+  }
 </style>
