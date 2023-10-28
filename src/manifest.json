@@ -1,28 +1,39 @@
 {
-    "name" : "",
-    "appid" : "",
-    "description" : "",
-    "versionName" : "1.0.0",
-    "versionCode" : "100",
-    "transformPx" : false,
+    "name": "爽爽租",
+    "appid": "__UNI__68800CF",
+    "description": "爽爽租",
+    "versionName": "1.01.011",
+    "versionCode": 101011,
+    "transformPx": false,
     /* 5+App特有相关 */
-    "app-plus" : {
-        "usingComponents" : true,
-        "nvueStyleCompiler" : "uni-app",
-        "compilerVersion" : 3,
-        "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
-            "waiting" : true,
-            "autoclose" : true,
-            "delay" : 0
+    "app-plus": {
+        "compatible": {
+            "ignoreVersion": true // true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持
+        },
+        "usingComponents": true,
+        "nvueStyleCompiler": "uni-app",
+        "compilerVersion": 3,
+        "splashscreen": {
+            "alwaysShowBeforeRender": true,
+            "waiting": true,
+            "autoclose": true,
+            "delay": 0
+        },
+        //iOS平台的安全区域
+        "safearea": {
+            "bottom": {
+                "offset": "auto"
+            }
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules": {
+            "Payment": {}
+        },
         /* 应用发布信息 */
-        "distribute" : {
+        "distribute": {
             /* android打包配置 */
-            "android" : {
-                "permissions" : [
+            "android": {
+                "permissions": [
                     "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
                     "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
@@ -38,36 +49,108 @@
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
+                ],
+                "schemes": "hbuilder,ssz",
+                "minSdkVersion": 21,
+                "abiFilters": ["arm64-v8a", "x86"],
+                "autoSdkPermissions": true
             },
             /* ios打包配置 */
-            "ios" : {},
+            "ios": {
+                "dSYMs": false,
+                "urltypes": "hbuilder,ssz",
+                "capabilities": {
+                    "entitlements": {
+                        "com.apple.developer.associated-domains": ["applinks:api.ceshi.shshzu.com", "applinks:api.shshzu.com"]
+                    },
+                    // 合并到工程entitlements文件的数据（json格式）
+                    "plists": {}
+                },
+                "privacyDescription": {},
+                "idfa": false
+            },
+            // 合并到工程Info.plist文件的数据（json格式）
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs": {
+                "ad": {},
+                "oauth": {},
+                "payment": {
+                    "alipay": {
+                        "__platform__": ["ios", "android"]
+                    }
+                }
+            },
+            "icons": {
+                "android": {
+                    "hdpi": "unpackage/res/icons/72x72.png",
+                    "xhdpi": "unpackage/res/icons/96x96.png",
+                    "xxhdpi": "unpackage/res/icons/144x144.png",
+                    "xxxhdpi": "unpackage/res/icons/192x192.png"
+                },
+                "ios": {
+                    "appstore": "unpackage/res/icons/1024x1024.png",
+                    "ipad": {
+                        "app": "unpackage/res/icons/76x76.png",
+                        "app@2x": "unpackage/res/icons/152x152.png",
+                        "notification": "unpackage/res/icons/20x20.png",
+                        "notification@2x": "unpackage/res/icons/40x40.png",
+                        "proapp@2x": "unpackage/res/icons/167x167.png",
+                        "settings": "unpackage/res/icons/29x29.png",
+                        "settings@2x": "unpackage/res/icons/58x58.png",
+                        "spotlight": "unpackage/res/icons/40x40.png",
+                        "spotlight@2x": "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone": {
+                        "app@2x": "unpackage/res/icons/120x120.png",
+                        "app@3x": "unpackage/res/icons/180x180.png",
+                        "notification@2x": "unpackage/res/icons/40x40.png",
+                        "notification@3x": "unpackage/res/icons/60x60.png",
+                        "settings@2x": "unpackage/res/icons/58x58.png",
+                        "settings@3x": "unpackage/res/icons/87x87.png",
+                        "spotlight@2x": "unpackage/res/icons/80x80.png",
+                        "spotlight@3x": "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen": {
+                "useOriginalMsgbox": true
+            }
         }
     },
     /* 快应用特有相关 */
-    "quickapp" : {},
+    "quickapp": {},
     /* 小程序特有相关 */
-    "mp-weixin" : {
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false
+    "mp-weixin": {
+        "appid": "wxad6ae3404e43613e",
+        "setting": {
+            "urlCheck": false
         },
-        "usingComponents" : true,
+        "usingComponents": true,
         "components" :true
     },
-    "mp-alipay" : {
-        "usingComponents" : true
+    "mp-alipay": {
+        "usingComponents": true,
+        "component2": true,
+        "appid": "2021004121603059",
+        "plugins": {
+            "couponPlugin": {
+                "version": "*",
+                "provider": "2021002172680015"
+            },
+            "vipCard": {
+                "version": "*",
+                "provider": "2021001107697072"
+            }
+        }
     },
-    "mp-baidu" : {
-        "usingComponents" : true
+    "mp-baidu": {
+        "usingComponents": true
     },
-    "mp-toutiao" : {
-        "usingComponents" : true
+    "mp-toutiao": {
+        "usingComponents": true
     },
     "uniStatistics": {
         "enable": false
     },
-    "vueVersion" : "3"
+    "vueVersion": "3"
 }

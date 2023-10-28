@@ -1,16 +1,26 @@
 <script setup lang="ts">
-  import { useTitle } from '@/hooks/useTitle';
-  import { forward } from '@/utils/router';
+import { useTitle } from '@/hooks/useTitle';
+import { forward } from '@/utils/router';
+import Profile from '../profile/profile.vue';
+    const $test = inject('$test')
 
-  const { title, changeTitle } = useTitle();
-  const confirm=(e:any)=>{
-  console.log(e)
-  }
-  function goTest() {
-    forward('test', {
-      a: 1,
-    });
-  }
+const { title, changeTitle } = useTitle();
+const a=ref(1)
+function goTest() {
+  forward('test', {
+    a: 1
+  });
+}
+function goTest2() {
+  forward('index2', {
+    a: 1
+  });
+}
+function goTest3() {
+  forward('mine', {
+    a: 1
+  });
+}
 </script>
 
 <template>
@@ -21,6 +31,10 @@
     </view>
     <view @click="changeTitle">changeTitle</view>
     <view @click="goTest">测试页</view>
+    <view @click="goTest2">index测试页</view>
+    <view @click="goTest3">mine测试页</view>
+
+    <profile/>
   </view>
 </template>
 
