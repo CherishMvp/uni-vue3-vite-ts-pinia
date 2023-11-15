@@ -13,7 +13,6 @@
     const { name } = setupStore
     console.log('testStore', a.value)
     onShow(() => {
-        console.log('aa', a.value)
         console.log('setupStore==name', name.value)
     })
 </script>
