@@ -18,8 +18,7 @@ vue3 配套的 vscode 插件为 volar,vetur 会存在冲突
 
 **解决方法：**
 
-按照 `commitlint.config.js` 文件中定义的规则进行`git commit`操作
-示例:`git commit -m 'feat: xxxxxx'`
+按照 `commitlint.config.js` 文件中定义的规则进行`git commit`操作示例:`git commit -m 'feat: xxxxxx'`
 
 ## 如何根据快速定义 ts 接口类型
 
@@ -41,9 +40,9 @@ ts 类型声明在带来类型提示，减少编程过程中 bug 率的同时，
 
 **解决方法：**
 
-- 增加文件的执行权限。
+-   增加文件的执行权限。
 
-  ```shell
-  chmod +x ./.husky/pre-commit
-  chmod +x ./.husky/commit-msg
-  ```
+    ```shell
+    chmod +x ./.husky/pre-commit
+    chmod +x ./.husky/commit-msg
+    ```

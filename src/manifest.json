@@ -126,7 +126,7 @@
             "urlCheck": false
         },
         "usingComponents": true,
-        "components" :true
+        "components": true
     },
     "mp-alipay": {
         "usingComponents": true,

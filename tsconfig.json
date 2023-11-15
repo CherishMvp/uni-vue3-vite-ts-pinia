@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "ES6",
+        "moduleResolution": "Node",
         "allowJs": true,
         "outDir": "./dist",
         "jsx": "preserve",
@@ -15,8 +15,8 @@
             "@/*": ["./src/*"]
         },
 
-        "lib": ["esnext", "dom"],
-        "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-ui-types", "@ttou/uview-typings/v3", "@ttou/uview-typings/refs"]
+        "lib": ["esnext", "dom", "ES6"],
+        "types": ["@dcloudio/types", "miniprogram-api-typings", "wot-design-uni/global.d.ts", "pinia-plugin-persist-uni"] //导入ui库类型提示
     },
     "exclude": ["node_modules", "dist"],
     "include": ["src/*.vue", "src/**/*.vue", "src/**/**/*.vue", "src/**/**/**/*.vue", "src/**/*.js", "src/**/**/*.js", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./auto-imports.d.ts"]

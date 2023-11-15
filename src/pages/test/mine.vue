@@ -1,7 +1,6 @@
 <template>
     <div>
         <uni-card title="ss"> </uni-card>
-        <u-button type="primary" :color="'#bfa'">提交</u-button>
         <UniCard />
     </div>
 </template>

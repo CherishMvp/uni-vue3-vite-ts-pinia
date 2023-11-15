@@ -7,7 +7,6 @@ import App from './App.vue'
 // import * as config from '@/config'
 import store from '@/store'
 // main.js，注意要在use方法之后执行
-import uviewPlus from 'uview-plus'
 export function createApp() {
     const app = createSSRApp(App)
     // 使用 provide 方法提供全局属性
@@ -17,7 +16,6 @@ export function createApp() {
     // provide('$setting', { ...setting, ...config })
     // provide('$safeArea', $un.getSafeArea())
     app.use(store)
-    app.use(uviewPlus)
     // 如此配置即可
     return {
         app,

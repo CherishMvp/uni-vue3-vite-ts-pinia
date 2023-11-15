@@ -4,7 +4,6 @@ import AutoImportTypes from 'auto-import-types'
 import PiniaAutoRefs from 'pinia-auto-refs'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 import env from './src/config/env'
@@ -18,6 +17,8 @@ export default defineConfig({
         extensions: ['.mjs', '.js', '.jsx', '.json', '.vue'],
     },
     plugins: [
+        AutoImportTypes(),
+
         PiniaAutoRefs({
             storeDir: 'src/store',
         }),
@@ -44,7 +45,6 @@ export default defineConfig({
             mode: 'vue-scoped',
         }),
         uni(),
-        AutoImportTypes(),
     ],
     server: {
         open: true, // 自动打开

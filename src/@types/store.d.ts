@@ -1,6 +1,6 @@
 declare namespace User {
-  interface UserInfo {
-    token: string
-    user_id: Number
-  }
+    interface UserInfo {
+        token: string
+        user_id: Number
+    }
 }
