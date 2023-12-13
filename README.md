@@ -114,3 +114,11 @@
 -   uni 或者 uview-plus 的组件没有类型提示，是因为 volar 插件的问题，以及 vscode 版本安装错误；一般最新的 volar 版本功能比较全，vscode 也要升级
 -   参考链接`https://uni-helper.js.org/uni-ui-types`
 -   配置好后引入的外部组件就会有绿色类型提示
+
+# 2023-12-13 17:37:26
+
+-   项目初始化准备
+    -   最好全局安装 nvm 以及 nrm
+        -   nvm 可以直接从 github 下载安装
+    -   全局安装 pnpm，用 pnpm 安装依赖
+    -   微信开发者工具下载

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
     import { useInit } from '@/hooks/useInit'
-    import { UniCard } from '@uni-helper/uni-ui-types'
     const aa = reactive({
         A: 1,
     })
@@ -8,7 +7,6 @@
         const { pageName, pagePath, pageQuery } = useInit()
         console.log(pageName, pagePath, pageQuery, 'pageName,pagePath, pageQuery')
     })
-    const a = ref<UniCard>()
 </script>
 
 <template>
